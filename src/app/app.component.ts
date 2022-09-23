@@ -9,5 +9,5 @@ import { ListComponent } from './list/list.component';
 })
 
 export class AppComponent {
-  title = " TO DO LIST 📝";
+  title = "TO DO LIST 📝";
 }
