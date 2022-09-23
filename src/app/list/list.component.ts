@@ -1,9 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { saveAs } from 'file-saver';
 import { faEdit, faFileCsv, IconDefinition,faTrash,faSave} from '@fortawesome/free-solid-svg-icons';
-import {  } from '@fortawesome/free-solid-svg-icons';
-import {  } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
