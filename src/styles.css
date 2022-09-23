@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+    background: url(./assets/images/vecteezy_abstract-wave-background-with-blue-and-orange-color_.jpg) bottom no-repeat fixed;
+    background-size: 100%, 100%;
+}
+
+@font-face {
+    font-family: "Kayak";
+    src: local("Kayak"), url(./assets/fonts/kayak/kayak-regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Quantum";
+    src: local("Kayak"), url(./assets/fonts/quantum/quantum-regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Modern";
+    src: local("Modern"), url(./assets/fonts/modernsans/modern-sans.otf) format("truetype");
+}
+

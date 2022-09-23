@@ -1,0 +1,37 @@
+<!--Save Bar Item-->
+<app-item (savedText)="addToListOnSaved($event)"></app-item>
+
+<!--Alert Section-->
+<div>
+    <div class="alert" id="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning!</strong>
+        {{alertmessage}}
+    </div>
+</div>
+
+<!--Export-->
+<div class="export center">
+    <a class="btn btn-outline-secondary btn-lg" (click)="exportToDoListIntoCSV()">
+        Export list into .csv
+        <fa-icon [icon]="faFileCsv"></fa-icon>
+    </a>
+</div>
+
+<!--Item List-->
+<ul>
+    <li *ngFor="let toDo of toDoList, let i = index">
+        <div class="input-group">
+            <input class="form-control" type="text" value="{{toDo}}" disabled="disabled" id="{{i}}" > 
+            <a class="btn btn-outline-secondary group-btn-edit" (click)="edit(i)">
+                <fa-icon [icon]="faIcons[i]"></fa-icon>
+            </a> 
+            <a class="btn btn-outline-secondary group-btn-delete" (click)="deleteByStringValue(toDo)" >
+                <fa-icon [icon]="faTrash"></fa-icon>
+            </a>               
+        </div>  
+    </li>
+</ul>
+
+
+

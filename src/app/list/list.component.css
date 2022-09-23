@@ -1,0 +1,63 @@
+.exportButton{
+    font-family: "Kayak";
+    font-size: large;
+}
+
+.export{
+    padding-top: 1%;
+    font-size: large;
+    font-weight: bold;
+    font-family: "Kayak";
+    color: black; 
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+li {
+    padding-top: 1%;
+}
+
+.group-btn-edit{
+    width: 10%;
+    font-family: "Kayak";
+    font-size: large;
+}
+
+.group-btn-delete{
+    width: 10%;
+    font-family: "Kayak";
+    font-size: large;
+    color: red;
+}
+
+.form-control{
+    width: 80%;
+    font-family: "Kayak";
+    font-size: large;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    display: none;
+  }
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }

@@ -1,0 +1,40 @@
+.container {
+    padding-top: 1%;
+    display: inline-block;
+}
+
+.title{
+    font-size:xx-large;
+    font-weight: bold;
+    font-family: "Modern";
+    color: black;   
+}
+
+.export{
+    font-size: large;
+    font-weight: bold;
+    font-family: "Kayak";
+    color: black; 
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.solid {
+    border-top: 4px solid black;
+    color: black;
+}
+
+.separator {
+    width: 70%;
+    margin: auto;
+    color: black;
+}
+
+.hub{
+    width: 70%;
+    margin: auto;
+}
