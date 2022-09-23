@@ -58,6 +58,6 @@ li {
     transition: 0.3s;
   }
 
-  .closebtn:hover {
+.closebtn:hover {
     color: black;
   }
