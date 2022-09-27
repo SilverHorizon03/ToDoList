@@ -8,5 +8,5 @@ import { Component, Input, ViewChild} from '@angular/core';
 })
 
 export class AppComponent {
-  title = "TO DO LIST 📝";
+  title = "📝 TO DO LIST 📝";
 }

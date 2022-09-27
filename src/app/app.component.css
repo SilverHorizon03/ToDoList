@@ -19,7 +19,6 @@
 
 .center {
     margin: auto;
-    width: 50%;
     text-align: center;
 }
 
@@ -35,6 +34,6 @@
 }
 
 .hub{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }

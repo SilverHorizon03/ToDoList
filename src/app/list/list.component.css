@@ -21,20 +21,20 @@ li {
 }
 
 .group-btn-edit{
-    width: 10%;
+    width: 15%;
     font-family: "Kayak";
     font-size: large;
 }
 
 .group-btn-delete{
-    width: 10%;
+    width: 15%;
     font-family: "Kayak";
     font-size: large;
     color: red;
 }
 
 .form-control{
-    width: 80%;
+    width: 70%;
     font-family: "Kayak";
     font-size: large;
 }

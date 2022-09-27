@@ -23,10 +23,10 @@
     <li *ngFor="let toDo of toDoList, let i = index">
         <div class="input-group">
             <input class="form-control" type="text" value="{{toDo}}" disabled="disabled" id="{{i}}" > 
-            <a class="btn btn-outline-secondary group-btn-edit" (click)="edit(i)">
+            <a class="btn btn-outline-secondary group-btn-edit center" (click)="edit(i)">
                 <fa-icon [icon]="faIcons[i]"></fa-icon>
             </a> 
-            <a class="btn btn-outline-secondary group-btn-delete" (click)="deleteByStringValue(toDo)" >
+            <a class="btn btn-outline-secondary group-btn-delete center" (click)="deleteByStringValue(toDo)" >
                 <fa-icon [icon]="faTrash"></fa-icon>
             </a>               
         </div>  
