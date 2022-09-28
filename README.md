@@ -1,6 +1,6 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+This project was generated with  version 14.2.1.
 
 ## Development server
 
@@ -27,8 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 In order to view the site make sure that your browser support lastest version of Bootstrap.
-Further information here:
-# https://github.com/browserslist/browserslist#readme
+Further information [here](https://github.com/browserslist/browserslist#readme):
 
 >= 0.5%
 last 2 major versions
