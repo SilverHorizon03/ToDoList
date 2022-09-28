@@ -69,13 +69,14 @@ export class ListComponent implements OnInit {
   }
   
   deleteByIndex(index: number): void{
-    this.toDoList.splice(index, 1);
+    this.toDoList.splice(index, 1)
+    this.faIcons.splice(index, 1);
     this.saveInSessionStorage();
   }
   
   edit(id: number): void {
+    /*
     let inputBox =  (document.getElementById(""+id) as HTMLButtonElement);
-    // Please make this ifs make sense and not be nested SPECIALLY NOT BEING NESTED WILL BE NICE
     if(inputBox.disabled){
       inputBox.disabled = false;
       this.faIcons[id] = faSave;
@@ -95,12 +96,33 @@ export class ListComponent implements OnInit {
       } else
       this.alert("Cannot edit this element (Already in use!)");
     }
+    */
+    let inputBox =  (document.getElementById(""+id) as HTMLButtonElement);
+    let toDoText = inputBox.value;
+    if(inputBox.disabled){
+      inputBox.disabled = false;
+      this.faIcons[id] = faSave;
+    } else {   
+      if(toDoText==""){
+        this.deleteByIndex(id);
+        return;
+      }
+      if(this.checkIfElementIsInArray(toDoText, this.toDoList) && toDoText!= this.toDoList[id]){
+        this.alert("Cannot edit this element (Already in use!)");
+        return;
+      }
+      this.toDoList.splice(id, 1, toDoText);
+      inputBox.disabled = true;
+      this.faIcons[id] = faEdit;
+      this.forceDisableAlert();
+      this.saveInSessionStorage();     
+    }
   }
   
   
   checkIfElementIsInArray(item: string, array: string[]): boolean{
     if (array.indexOf(item) == -1) return false;
-    return true;
+      return true;
     // for(let i=0; i<array.length; i++)
     //   if(item == array[i])
     //     return true;
@@ -141,8 +163,7 @@ export class ListComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.recoverFromSessionStorage();
-    
+    this.recoverFromSessionStorage(); 
   }
   
 }
