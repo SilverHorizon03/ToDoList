@@ -6,11 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./save.component.css']
 })
 export class SaveComponent implements OnInit {
-  
-
   @Output() savedText = new EventEmitter<HTMLInputElement>();
   
-
   constructor() {}
 
   ngOnInit(): void {
