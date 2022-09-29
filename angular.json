@@ -4,6 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-app": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "es": "src/locale/messages.es.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "it": "src/locale/messages.it.xlf",
+          "de": "src/locale/messages.de.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +22,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "es",
+              "fr",
+              "it",
+              "de"
+            ],
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,6 +43,18 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "localize": ["es"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "it": {
+              "localize": ["it"]
+            },
+            "de": {
+              "localize": ["de"]
+            },
             "production": {
               "budgets": [
                 {
@@ -63,6 +90,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "es": {
+              "browserTarget": "my-app:build:es"
+            },
+            "fr": {
+              "browserTarget": "my-app:build:fr"
+            },
+            "it": {
+              "browserTarget": "my-app:build:it"
+            },
+            "de": {
+              "browserTarget": "my-app:build:de"
+            },
             "production": {
               "browserTarget": "my-app:build:production"
             },
