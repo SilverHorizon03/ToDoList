@@ -10,6 +10,11 @@
     color: black;   
 }
 
+.dropdown{
+    border: 1px black solid;
+    width: 10vh;
+}
+
 .export{
     font-size: large;
     font-weight: bold;
@@ -36,4 +41,10 @@
 .hub{
     width: 80%;
     margin: auto;
+}
+
+.top-right{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

@@ -45,7 +45,7 @@ li {
     color: white;
     margin-bottom: 15px;
     display: none;
-  }
+}
   
 .closebtn {
     margin-left: 15px;
@@ -56,8 +56,8 @@ li {
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
+}
 
 .closebtn:hover {
     color: black;
-  }
+}

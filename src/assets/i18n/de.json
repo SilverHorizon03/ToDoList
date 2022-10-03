@@ -1,0 +1,10 @@
+{
+    "item-component": {
+        "savebutton": "Speichern"
+
+    },
+    "list-component": {
+        "alert": "",
+        "csvbutton": "Liste in .csv exportieren"
+    }
+}

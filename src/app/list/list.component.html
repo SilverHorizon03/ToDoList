@@ -1,5 +1,5 @@
 <!--Save Bar Item-->
-<app-save (savedText)="addToListOnSaved($event)"></app-save>
+<app-item (savedText)="addToListOnSaved($event)"></app-item>
 
 <!--Alert Section-->
 <div>
@@ -13,7 +13,7 @@
 <!--Export-->
 <div class="export center">
     <a class="btn btn-outline-secondary btn-lg" (click)="exportToDoListIntoCSV()">
-        Export list into .csv
+        {{"list-component.csvbutton" | translate}}
         <fa-icon [icon]="faFileCsv"></fa-icon>
     </a>
 </div>

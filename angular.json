@@ -63,18 +63,6 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "es": {
-              "browserTarget": "my-app:build:es"
-            },
-            "fr": {
-              "browserTarget": "my-app:build:fr"
-            },
-            "it": {
-              "browserTarget": "my-app:build:it"
-            },
-            "de": {
-              "browserTarget": "my-app:build:de"
-            },
             "production": {
               "browserTarget": "my-app:build:production"
             },

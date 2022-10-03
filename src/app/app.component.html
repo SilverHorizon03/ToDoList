@@ -3,6 +3,43 @@
   {{title}}
 </div>
 
+
+<!--
+<ng-select
+class="dropdown"
+[items]="supportedLanguages"
+[clearable]="false"
+bindValue="value"
+(change)="selectLang($event)"
+[(ngModel)]="browserlang">
+  <ng-template ng-label-tmp let-item="item">
+    <div class="row">
+      <div class="container">
+        {{item.value | uppercase}}
+
+        <span [class]="item.icon"></span>
+    
+      </div>
+
+    </div>
+  </ng-template>
+
+  <ng-template ng-option-tmp let-item="item">
+    <div class="row">
+      <div class="col-6">
+    {{item.value | uppercase}}
+
+      </div>
+      <div class="col-6">
+    <span [class]="item.icon"></span>
+
+      </div>
+    </div>
+  </ng-template>
+</ng-select>
+-->
+
+
 <!--Separator-->
 <div class="separator">
   <hr class="solid">
@@ -12,3 +49,25 @@
 <div class="hub center">
   <app-list></app-list>
 </div>
+
+<!--Language Selector-->
+<div class="top-right">
+  <button type="button" class="btn btn-outline-secondary center dropdown-toggle" data-bs-toggle="dropdown">
+    {{browserLang.name}}
+    <span [class]="browserLang.icon"></span>
+  </button>
+    <ul class="dropdown-menu">
+      <li *ngFor="let language of supportedLanguages">
+        <a class="dropdown-item" (click)="selectLang(language)">
+          {{language.name}}
+          <span [class]="language.icon"></span>
+        </a>
+      </li>
+    </ul>
+</div>
+
+
+
+
+
+
