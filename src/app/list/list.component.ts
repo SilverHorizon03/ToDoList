@@ -16,8 +16,14 @@ export class ListComponent implements OnInit {
   faTrash = faTrash;
   faSave = faSave;
   faEdit = faEdit;
+
   alertmessage = "";
-  
+  alerts: string [] = [
+    "Cannot save into .csv, (Is empty!)",
+    "Cannot save this element (Already in use!)",
+    "Cannot save this element (Is empty!)",
+    "Cannot edit this element (Already in use!)",
+  ]
   
   constructor() {}
   
@@ -28,24 +34,23 @@ export class ListComponent implements OnInit {
       csvarray = csvarray + tag;
       
       for(let i=0; i<this.toDoList.length-1; i++)
-      csvarray = csvarray  + '"' + this.toDoList[i] + '"' + "," + "\n"; 
+        csvarray = csvarray  + '"' + this.toDoList[i] + '"' + "," + "\n"; 
       csvarray = csvarray + '"' + this.toDoList[this.toDoList.length-1] + '"';
-      
-      
+
       let csvfile = new Blob([csvarray], { type: 'text/csv;charset=utf-8' });
       saveAs(csvfile, 'mytodolist.csv');
-    } else 
-    this.alert("Cannot save into .csv, (Is empty!)"); 
+    } else
+    this.alert(this.alerts[0]); 
     
   }
   
   addToListOnSaved(textHTML: any){
     let text = textHTML.value;
     if(this.checkIfElementIsInArray(text,this.toDoList)) {
-      this.alert("Cannot save this element (Already in use!)");
+      this.alert(this.alerts[1]);
       return;
     } else if(text== ""){
-      this.alert("Cannot save this element (Is empty!)");
+      this.alert(this.alerts[2]);
       return;
     }
 
@@ -60,7 +65,6 @@ export class ListComponent implements OnInit {
     this.toDoList.push(text);
     */
   }
-  
   
   deleteByStringValue(toDo: string): void{
     let delteteindex = this.toDoList.indexOf(toDo);
@@ -108,7 +112,7 @@ export class ListComponent implements OnInit {
         return;
       }
       if(this.checkIfElementIsInArray(toDoText, this.toDoList) && toDoText!= this.toDoList[id]){
-        this.alert("Cannot edit this element (Already in use!)");
+        this.alert(this.alerts[3]);
         return;
       }
       this.toDoList.splice(id, 1, toDoText);
@@ -118,7 +122,6 @@ export class ListComponent implements OnInit {
       this.saveInSessionStorage();     
     }
   }
-  
   
   checkIfElementIsInArray(item: string, array: string[]): boolean{
     if (array.indexOf(item) == -1) return false;
