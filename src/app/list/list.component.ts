@@ -16,14 +16,8 @@ export class ListComponent implements OnInit {
   faTrash = faTrash;
   faSave = faSave;
   faEdit = faEdit;
-
   alertmessage = "";
-  alerts: string [] = [
-    "Cannot save into .csv, (Is empty!)",
-    "Cannot save this element (Already in use!)",
-    "Cannot save this element (Is empty!)",
-    "Cannot edit this element (Already in use!)",
-  ]
+
   
   constructor() {}
   
@@ -40,17 +34,17 @@ export class ListComponent implements OnInit {
       let csvfile = new Blob([csvarray], { type: 'text/csv;charset=utf-8' });
       saveAs(csvfile, 'mytodolist.csv');
     } else
-    this.alert(this.alerts[0]); 
+    this.alert("Cannot save into .csv, (Is empty!)"); 
     
   }
   
   addToListOnSaved(textHTML: any){
     let text = textHTML.value;
     if(this.checkIfElementIsInArray(text,this.toDoList)) {
-      this.alert(this.alerts[1]);
+      this.alert("Cannot save this element (Already in use!)");
       return;
     } else if(text== ""){
-      this.alert(this.alerts[2]);
+      this.alert("Cannot save this element (Is empty!)");
       return;
     }
 
@@ -112,7 +106,7 @@ export class ListComponent implements OnInit {
         return;
       }
       if(this.checkIfElementIsInArray(toDoText, this.toDoList) && toDoText!= this.toDoList[id]){
-        this.alert(this.alerts[3]);
+        this.alert("Cannot edit this element (Already in use!)");
         return;
       }
       this.toDoList.splice(id, 1, toDoText);
