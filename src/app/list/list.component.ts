@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
   faSave = faSave;
   faEdit = faEdit;
   alertmessage = "";
-
+  
   
   constructor() {}
   
@@ -28,12 +28,13 @@ export class ListComponent implements OnInit {
       csvarray = csvarray + tag;
       
       for(let i=0; i<this.toDoList.length-1; i++)
-        csvarray = csvarray  + '"' + this.toDoList[i] + '"' + "," + "\n"; 
+      csvarray = csvarray  + '"' + this.toDoList[i] + '"' + "," + "\n"; 
       csvarray = csvarray + '"' + this.toDoList[this.toDoList.length-1] + '"';
-
+      
+      
       let csvfile = new Blob([csvarray], { type: 'text/csv;charset=utf-8' });
       saveAs(csvfile, 'mytodolist.csv');
-    } else
+    } else 
     this.alert("Cannot save into .csv, (Is empty!)"); 
     
   }
@@ -59,6 +60,7 @@ export class ListComponent implements OnInit {
     this.toDoList.push(text);
     */
   }
+  
   
   deleteByStringValue(toDo: string): void{
     let delteteindex = this.toDoList.indexOf(toDo);
@@ -116,6 +118,7 @@ export class ListComponent implements OnInit {
       this.saveInSessionStorage();     
     }
   }
+  
   
   checkIfElementIsInArray(item: string, array: string[]): boolean{
     if (array.indexOf(item) == -1) return false;
