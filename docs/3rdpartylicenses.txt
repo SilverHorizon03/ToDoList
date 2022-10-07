@@ -4,9 +4,6 @@ MIT
 @angular/core
 MIT
 
-@angular/forms
-MIT
-
 @angular/platform-browser
 MIT
 
@@ -113,15 +110,6 @@ trademarks does not indicate endorsement of the trademark holder by Font
 Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
-
-@ng-select/ng-select
-MIT
-
-@ngx-translate/core
-MIT
-
-@ngx-translate/http-loader
-MIT
 
 file-saver
 MIT
